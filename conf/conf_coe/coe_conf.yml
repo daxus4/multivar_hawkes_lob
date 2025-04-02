@@ -1,0 +1,4 @@
+pairs: ['BTC_USD', 'BTC_USDT', 'ETH_USD', 'ETH_USDT', 'ETH_BTC']
+bi_levels: [5,10,15]
+training_times_seconds: [1800]
+simulation_periods_seconds: [120]

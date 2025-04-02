@@ -1,0 +1,2 @@
+testing_conf_filename	events_conf_filename	model_name
+C:\Users\Admin\OneDrive - Politecnico di Milano\phd\code\multivariate_hawkes\conf\conf_testing\eth_usdt_testing_conf.yml	C:\Users\Admin\OneDrive - Politecnico di Milano\phd\code\multivariate_hawkes\conf\conf_events\mid_price_change_and_sublevels_events_conf.yml	multivariate_hawkes
