@@ -1,6 +1,6 @@
 # multivariate_hawkes_lob
 
-This repository contains the code used to collect Limit Order Book (LOB) data from Bitfinex, convert them into a Pandas dataframe, and use them to train and simulate Multivariate Hawkes Processes.
+This repository contains the code used to collect Limit Order Book data from Bitfinex, convert them into a Pandas dataframe, and use them to train and simulate Multivariate Hawkes Processes.
 
 ## Requirements
 
