@@ -28,11 +28,6 @@ Create the environment from `environment_hawkes.yml` and force the name to `hawk
 conda env create -n hawkes_env -f environment_hawkes.yml
 ```
 
-> If you later change packages in the YAML, you can update the environment with:
-> ```bash
-> conda env update -n hawkes_env -f environment_hawkes.yml
-> ```
-
 ---
 
 ## Usage
