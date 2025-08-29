@@ -13,19 +13,17 @@ https://docs.conda.io/projects/conda/en/latest/user-guide/install/
 You will create **two conda environments** — one for data collection and one for training/simulation.
 
 ### 1) Environment for collecting LOB data
-Create and activate the environment, then install the Python dependencies from `requirements_bitfinex.txt` (a pip requirements file):
+Create the environment from `environment_bitfinex_api.yml`:
 
 ```bash
-conda create -n lob_data_env python=3.10 -y
-conda activate lob_data_env
-python -m pip install -r requirements_bitfinex.txt
+conda env create -f environment_bitfinex_api.yml
 ```
 
 ### 2) Environment for training & simulating Multivariate Hawkes Processes
-Create the environment from `environment_hawkes.yml` and force the name to `hawkes_env` for consistency:
+Create the environment from `environment_hawkes.yml` :
 
 ```bash
-conda env create -n hawkes_env -f environment_hawkes.yml
+conda env create -f environment_hawkes.yml
 ```
 
 ---
@@ -36,7 +34,7 @@ conda env create -n hawkes_env -f environment_hawkes.yml
 Activate the data environment and run the collection script. Then convert the raw data to a Pandas dataframe.
 
 ```bash
-conda activate lob_data_env
+conda activate bitfinex_api
 python collect_lob_data.py
 python convert_lob_data.py
 ```
@@ -45,7 +43,7 @@ python convert_lob_data.py
 Activate the Hawkes environment and run the training script (greedy algorithm):
 
 ```bash
-conda activate hawkes_env
+conda activate hawkes
 python train_multivariate_hawkes_with_greedy_b_all_training_periods_bi.py
 ```
 
@@ -53,33 +51,6 @@ python train_multivariate_hawkes_with_greedy_b_all_training_periods_bi.py
 Still in the Hawkes environment, simulate events:
 
 ```bash
-python predict_mid_price_events.py
-```
-
----
-
-## Quickstart (copy/paste)
-
-```bash
-# 0) Install Conda/Miniconda first (see link above)
-
-# 1) Create LOB data env and install requirements
-conda create -n lob_data_env python=3.10 -y
-conda activate lob_data_env
-python -m pip install -r requirements_bitfinex.txt
-
-# 2) Collect and convert data
-python collect_lob_data.py
-python convert_lob_data.py
-
-# 3) Create Hawkes env from YAML
-conda env create -n hawkes_env -f environment_hawkes.yml
-conda activate hawkes_env
-
-# 4) Train
-python train_multivariate_hawkes_with_greedy_b_all_training_periods_bi.py
-
-# 5) Simulate
 python predict_mid_price_events.py
 ```
 
