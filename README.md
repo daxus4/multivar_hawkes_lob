@@ -53,10 +53,3 @@ Still in the Hawkes environment, simulate events:
 ```bash
 python predict_mid_price_events.py
 ```
-
----
-
-## Notes
-- The first environment uses a **pip** requirements file; that’s why we use `python -m pip install -r requirements_bitfinex.txt` after creating/activating the environment.
-- The second environment is built from a **conda YAML** file; `conda env create -n hawkes_env -f environment_hawkes.yml` ensures the environment is named consistently as `hawkes_env`.
-
